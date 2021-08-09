@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  
+  html{
+      font-size: 16px;
+  }
+
+.container{
+    width: 1228px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: var(--pure-white);
+    padding: .6rem 1.5rem;
+    background-color: var(--bold-dark);
+    border: 2px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--pure-white);
+    border: 2px solid var(--bold-dark);
+    color: var(--bold-dark);
+}
+
+.splide__pagination__page.is-active{
+    background-color: var(--bold-dark);
+}
+
+.splide__pagination > li button{
+    background-color: var(--pure-white);
+}
+
+.splide__arrow{
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.splide:hover .splide__arrow{
+    opacity: 1;
+}
+
+h5{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bold-dark);
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--bold-dark);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding: .5rem 0rem;
+}
+
+h4{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bold-dark);
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+
+form .add-cart-btn{
+    display: block;
+    width: 100%;
+    background-color: var(--white);
+    padding: .6rem .8rem;
+    margin-top: .5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--bold-dark);
+    border: 2px solid transparent;
+    font-size: .8rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+form .add-cart-btn:hover{
+    border-color: var(--bold-dark);
+}
+
+.glider-prev i, .glider-next i{
+    transform: scale(.7);
+}
+
+.responsive-table-wrapper{
+    display: none;
+}
+

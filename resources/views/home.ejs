@@ -1,0 +1,545 @@
+<!-- =======slider======== -->
+<section class="slider-section">
+    <div class="inner-slider">
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="container">
+                            <div class="slider-wrapper">
+                                <div class="slider-content">
+                                    <h5>new inspiration 2020</h5>
+                                    <h1>phone made for you!</h1>
+                                    <h5>trending for mobile and headphone style collection</h5>
+                                    <a href="#" class="btn">Shop now</a>
+                                </div>
+                                <div class="image">
+                                    <img src="img/banner_01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="container">
+                            <div class="slider-wrapper">
+                                <div class="slider-content">
+                                    <h5>new inspiration 2020</h5>
+                                    <h1>phone made for you!</h1>
+                                    <h5>trending for mobile and headphone style collection</h5>
+                                    <a href="#" class="btn">Shop now</a>
+                                </div>
+                                <div class="image">
+                                    <img src="img/banner_02.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="container">
+                            <div class="slider-wrapper">
+                                <div class="slider-content">
+                                    <h5>new inspiration 2020</h5>
+                                    <h1>phone made for you!</h1>
+                                    <h5>trending for mobile and headphone style collection</h5>
+                                    <a href="#" class="btn">Shop now</a>
+                                </div>
+                                <div class="image">
+                                    <img src="img/banner_01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======top-products===== -->
+<section class="top-products">
+    <div class="container">
+        <h1 class="top-products-heading">top selling products</h1>
+        <div class="top-products-wrapper">
+            <div class="products">
+                <div class="img">
+                    <img src="img/collection_02.png" alt="headphone">
+                </div>
+                <div class="product-content">
+                    <h5>new colors introduced</h5>
+                    <h2>headphones</h2>
+                    <div class="stars">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                    </div>
+                    <a href="#" class="btn">shop now</a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="img/collection_01.png" alt="iphone">
+                </div>
+                <div class="product-content">
+                    <h5>new colors introduced</h5>
+                    <h2>Apple</h2>
+                    <div class="stars">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                    </div>
+                    <a href="#" class="btn">shop now</a>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="img/products/sumsung/samsung1.jpeg" alt="samsung">
+                </div>
+                <div class="product-content">
+                    <h5>new colors introduced</h5>
+                    <h2>samsung</h2>
+                    <div class="stars">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star-half-alt"></i></span>
+                    </div>
+                    <a href="#" class="btn">shop now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =======latest-products======== -->
+<section class="latest-products">
+    <div class="container">
+        <h2 class="latest-product-heading">All products</h2>
+        <div class="latest-product-wrapper">
+            <% {products.forEach((product)=> { %>
+                <div class="latest-product">
+                    <div class="img">
+                        <img src="<%=product.image%>" alt="headphone">
+                    </div>
+                    <div class="latest-product-content">
+                        <h4>
+                            <%=product.name%>
+                        </h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>Rs <%= product.price %>
+                        </h4>
+                        <form action="/update-cart" method="POST">
+                            <button class="add-cart-btn" data-phone="<%=JSON.stringify(product)%>">add to
+                                cart</button>
+                        </form>
+                    </div>
+                </div>
+                <% })} %>
+        </div>
+    </div>
+</section>
+
+<!-- ======onePlus Banner======= -->
+<section class="banner">
+    <div class="container">
+        <div class="banner-wrapper">
+            <div class="img">
+                <a href="#">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/cnnjpp/July21/Nord2/Hero/Nord_2_Jul8th_1242x450.jpg"
+                        alt="banner-1">
+                </a>
+            </div>
+            <div class="img">
+                <a href="#">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/Headsets/realmeBudsq2/GoLive/Approved/D25129837_WL_realme_Buds_Q2_Go-live_Mob_Hero_1242x450.jpg"
+                        alt="banner-2">
+                </a>
+            </div>
+            <div class="img">
+                <a href="#">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Audio/Edict_NM/launch/Edict_1242x4501.jpg"
+                        alt="banner-3">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========accessories section======== -->
+<section class="accessories-section">
+    <div class="container">
+        <h2>shop accessories</h2>
+        <div class="accessories-wrapper">
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category_2._SY375_QL85_.jpg"
+                        alt="power bank">
+                </div>
+                <div class="access-content">
+                    <h4>power bank</h4>
+                </div>
+            </div>
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category._SY375_QL85_.jpg"
+                        alt="headset">
+                </div>
+                <div class="access-content">
+                    <h4>headsets</h4>
+                </div>
+            </div>
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category_3._SY375_QL85_.jpg"
+                        alt="cases & covers">
+                </div>
+                <div class="access-content">
+                    <h4>cases & cover</h4>
+                </div>
+            </div>
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category_4._SY375_QL85_.jpg"
+                        alt="cable & chargers">
+                </div>
+                <div class="access-content">
+                    <h4>cable & chargers</h4>
+                </div>
+            </div>
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category_5._SY250_QL85_.jpg"
+                        alt="screen protector">
+                </div>
+                <div class="access-content">
+                    <h4>screen protectors</h4>
+                </div>
+            </div>
+            <div class="accessories">
+                <div class="img">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/MobilesPage/New/D25047019_WLA_BAU_shop-by-category_7._SY312_QL85_.jpg"
+                        alt="shop now">
+                </div>
+                <div class="access-content">
+                    <h4>shop now</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =======bestseller section======= -->
+<!-- <section class="bestseller-section">
+        <div class="container">
+            <h2>best seller</h2>
+            <div class="bestseller-wrapper">
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/iPhone/iphone5.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/iPhone/iphone6.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/headphone/headphone5.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/sumsung/samsung3.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/headphone/headphone3.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/headphone/headphone8.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/sumsung/samsung2.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/iPhone/iphone2.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/headphone/headphone12.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="bestseller-product best-seller">
+                    <div class="tag">
+                        <span>best seller</span>
+                    </div>
+                    <div class="img">
+                        <img src="img/products/sumsung/samsung4.jpeg" alt="iphone">
+                    </div>
+                    <div class="bestseller-product-content">
+                        <h4>apple iphone 11</h4>
+                        <div class="stars">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <h4>$12</h4>
+                        <a href="#" class="add-cart-btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+<!-- =====brands section====== -->
+<section class="brand-section">
+    <div class="container">
+        <h2>shop by brand</h2>
+        <div class="brands-wrapper">
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/OnePlus/new_logo/D15815299_IN_WL_OnePlus_new_logo_brand_farm._CB1198675309_.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Xiaomi/D22232017_IN_WLME_Smartphone-UpgradeDays_April_mi-brand-farm.jpg"
+                    alt="logo-2">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Catpage/BrandFarm/liwuwe_2018-05-07T11-25_f0461b_1113497_350x100_gps_cn_17.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Vivo/vivo-brand-farm_350x100.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/CatPage/ShopbyBrand/Realme-Brand.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Wireless/OPPO/350x100.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Catpage/BrandFarm/liwuwe_2018-05-07T11-25_f0461b_1113497_350x100_gps_cn_13._CB485921160_SY100_.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/iQoo/350x1001.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Tecno/D22232017_IN_WLME_Smartphone-UpgradeDays_April_tecno_new.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Lava/LavaZ1/D20458230_WLD_LAVA_Z1_Launch_Lava-logo-tile.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Catpage/BrandFarm/liwuwe_2018-05-07T11-25_f0461b_1113497_350x100_gps_cn_2.jpg"
+                    alt="logo-1">
+            </div>
+            <div class="brand">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/WLA/March/Headsets/Jabra/Laucnh/Jabra._CB1198675309_.jpg"
+                    alt="logo-1">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====we offer======== -->
+<section class="we-offer">
+    <div class="container">
+        <div class="we-offer-wrapper">
+            <div class="weoffer-div">
+                <a href="#"><i class="fas fa-shipping-fast"></i></a>
+                <h4>free shipping</h4>
+            </div>
+            <div class="weoffer-div">
+                <a href="#"><i class="fas fa-credit-card"></i></a>
+                <h4>100% money back guarantee</h4>
+            </div>
+            <div class="weoffer-div">
+                <a href="#"><i class="fab fa-cc-visa"></i></i></a>
+                <h4>many payment gateway</h4>
+            </div>
+            <div class="weoffer-div">
+                <a href="#"><i class="fas fa-headset"></i></i></a>
+                <h4>24/7 online support</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======subscribe section======= -->
+<section class="subscribe">
+    <div class="container">
+        <div class="subscribe-wrapper">
+            <div class="subscribe-content">
+                <h2>subscribe to our newsletter</h2>
+                <small>a short sentence describing what someone will recieve by subscribing</small>
+            </div>
+            <div class="email-section">
+                <form action="#">
+                    <input type="email" required placeholder="enter your email address">
+                    <input type="submit" value="subscribe">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

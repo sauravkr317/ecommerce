@@ -1,0 +1,27 @@
+<section class="login">
+    <div class="login-container">
+        <form action="/login" method="POST">
+            <div class="login-content">
+                <% if(messages.error){ %> 
+                    <span>*<%=messages.error%></span>
+                <% } %> 
+                <div class="login-input-field">
+                    <h5>email</h5>
+                    <input type="text" placeholder="enter your email" autocomplete="of" class="login-input" name="email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="login-input-field">
+                    <h5>enter password</h5>
+                    <input type="password" autocomplete="of" placeholder="enter password" class="login-input" name="password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="login-btn-div">
+                    <button>login</button>
+                    <a href="/register">
+                        <h6>don't have account?</h6>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

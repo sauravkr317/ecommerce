@@ -1,0 +1,57 @@
+<section class="cart-section">
+    <div class="container">
+        <% if(session.cart && Object.keys(session.cart.items).length > 0) { %>
+            <div class="cart-section-wrapper">
+                <div class="cart-heading">
+                    <h4>product</h4>
+                    <h4>quantity</h4>
+                    <h4>subtotal</h4>
+                </div>
+                <div class="cart-item-wrapper">
+                    <% for(let phone of Object.values(session.cart.items)) { %>
+                        <div class="cart-items-grid">
+                            <div class="cart-item">
+                                <div class="cart-image">
+                                    <img src="<%=phone.item.image%>" alt="">
+                                </div>
+                                <div class="item-detail">
+                                    <h6><%=phone.item.name%></h6>
+                                    <a href="#" data-phoneitem ="<%=JSON.stringify(phone)%>" class="cart-remover">Remove</a>
+                                </div>
+                            </div>
+                            <div class="cart-item-center">
+                                <div class="cart-item-qty">
+                                    <h5><%=phone.qty%></h5>
+                                </div>
+                            </div>
+                            <div class="subtotal-price">
+                                <h5>rs <%=phone.item.price * phone.qty%></h5>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <hr>
+            <div class="total-price">
+                <h4>Total price: <span>Rs <%= session.cart.totalPrice%></span></h4>
+            </div>
+            <% if(!user){ %>
+                <div class="cart-order-button">
+                    <a href="/login">Login first</a>
+                </div>
+            <% } else { %>
+                <div class="cart-order-button">
+                    <a href="/place-order">Place order</a>
+                </div>
+            <% } %>
+        <% } else{ %>
+            <div class="empty-cart">
+                <h2 class="cart-empty-heading">Cart is empty</h2>
+                <div class="empty-cart-image">
+                    <img src="img/undraw_empty_cart_co35.svg" alt="">
+                </div>
+            </div>
+        <% } %>
+        
+    </div>
+</section>

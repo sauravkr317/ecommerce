@@ -1,0 +1,86 @@
+<!-- <div class="all-orders">
+    <div class="container">
+        <h3 class="all-orders-heading">All orders</h3>
+        <% if(messages.success){ %>
+        <div class="order-success">
+                <i class="far fa-check-circle"></i><span><%=messages.success%></span>
+        </div>
+        <% } %>
+        <table>
+            <tr>
+                <th>Orders</th>
+                <th>Phone no</th>
+                <th>Address</th>
+                <th>Time</th>
+            </tr>
+            <% if(orders.length){ %>
+                <% orders.forEach((order) =>{ %>
+                    <tr>
+                        <td><a href="#"><%=order._id%></a></td>
+                        <td><%=order.phone%></td>
+                        <td><%=order.address%></td>
+                        <td><%=moment(order.createdAt).format('hh:mm A')%></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr><td colspan="4">No order found!</td></tr>
+            <%} %>
+        </table>
+    </div>
+</div> -->
+
+<div class="all-orders">
+    <div class="container">
+        <h3 class="all-orders-heading">All orders</h3>
+        <% if(messages.success){ %>
+            <div class="order-success">
+                    <i class="far fa-check-circle"></i><span><%=messages.success%></span>
+            </div>
+            <% } %>
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">orders</th>
+                <th scope="col">Phone no</th>
+                <th scope="col">Address</th>
+                <th scope="col">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if(orders.length){ %>
+                    <% orders.forEach((order) =>{ %>
+                        <tr>
+                            <td><a href="#"><%=order._id%></a></td>
+                            <td><%=order.phone%></td>
+                            <td><%=order.address%></td>
+                            <td><%=moment(order.createdAt).format('hh:mm A')%></td>
+                        </tr>
+                    <% }) %>
+                <% } else { %>
+                    <tr><td colspan="4">No order found!</td></tr>
+                <%} %>
+            </tbody>
+        </table>
+
+        <div class="responsive-table-wrapper">
+            <% if(orders.length){ %>
+                <% orders.forEach((order) =>{ %>
+            <div class="responsive-table">
+                <div class="responsive-table-heading">
+                    <small class="small-heading">order id:</small>
+                    <small class="small-heading">phone no:</small>
+                    <small class="small-heading">address:</small>
+                    <small class="small-heading">time:</small>
+                </div>
+                <div class="responsive-table-content">
+                    <small><a href="#"><%=order._id%></a></small>
+                    <small><%=order.phone%></small>
+                    <small><%=order.address%></small>
+                    <small><%=moment(order.createdAt).format('hh:mm A')%></small>
+                </div>
+            </div>
+            <% }) %>
+            <% } %>
+        </div>
+    </div>
+</div>

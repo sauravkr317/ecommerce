@@ -1,0 +1,28 @@
+<section class="registration">
+    <div class="register-container">
+        <form action="/place-order" method="POST">
+            <div class="register-content">
+                    <span><%=messages.error ? messages.error : 'Enter order details'%></span>
+                <div class="register-input-field">
+                    <h5>name</h5>
+                    <input type="text" placeholder="enter your name" autocomplete="of" class="register" name="name" value="<%=messages.name%>">
+                </div>
+                <div class="register-input-field">
+                    <h5>phone no</h5>
+                    <input type="text" placeholder="enter phone no" autocomplete="of" class="register" name="phone" value="<%=messages.phone%>">
+                </div>
+                <div class="register-input-field">
+                    <h5>Landmark</h5>
+                    <input type="text" autocomplete="of" placeholder="enter landmark" class="register" name="landmark">
+                </div>
+                <div class="register-input-field">
+                    <h5>enter address</h5>
+                    <textarea cols="20" rows="3" placeholder="Address" name="address"></textarea>
+                </div>
+                <div class="register-btn-div">
+                    <button class="order-button">order!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

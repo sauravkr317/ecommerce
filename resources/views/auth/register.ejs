@@ -1,0 +1,33 @@
+<section class="registration">
+    <div class="register-container">
+        <form action="/register" method="POST">
+            <div class="register-content">
+                <% if(messages.error){ %> 
+                    <span>*<%=messages.error%></span>
+                <% } %> 
+                <div class="register-input-field">
+                    <h5>name</h5>
+                    <input type="text" placeholder="enter your name" autocomplete="of" class="register" name="name" value="<%=messages.name%>">
+                </div>
+                <div class="register-input-field">
+                    <h5>email</h5>
+                    <input type="text" placeholder="enter your email" autocomplete="of" class="register" name="email" value="<%=messages.email%>">
+                </div>
+                <div class="register-input-field">
+                    <h5>phone no</h5>
+                    <input type="text" placeholder="enter your phone no" autocomplete="of" class="register" name="phone" value="<%=messages.phone%>">
+                </div>
+                <div class="register-input-field">
+                    <h5>enter password</h5>
+                    <input type="password" autocomplete="of" placeholder="enter password" class="register" name="password">
+                </div>
+                <div class="register-btn-div">
+                    <button>register</button>
+                    <a href="/login">
+                        <h6>already have account?</h6>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
