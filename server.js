@@ -1,5 +1,5 @@
 import express from 'express';
-import { DB_URL, PORT, SESSION_SECRET } from './app/config';
+import { DB_URL, SESSION_SECRET } from './app/config';
 import './app/db';
 import ejs from 'ejs';
 import path from 'path';
@@ -56,6 +56,6 @@ initRoute(app);
 app.use('/Uploads', express.static('Uploads'));
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-    console.log(`App is running on ${PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`App is running on ${process.env.PORT}`)
 });
